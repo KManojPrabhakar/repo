@@ -1,0 +1,10 @@
+<div class="user-detail" *ngIf="currentUserDetails">
+  <p class="user-detail__name">Name: {{currentUserDetails.name}} </p>
+  <ng-container *ngFor="let repo of currentUserDetails.repositories;let i = index">
+
+    <p>Repository {{i+1}}: {{repo.name}}</p>
+    <p>Description: {{repo.desc}}</p>
+
+  </ng-container>
+
+</div>

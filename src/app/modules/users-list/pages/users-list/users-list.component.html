@@ -1,0 +1,18 @@
+<div class="users">
+  <input #inputSearch class="btn-no-border form-control font-regular flex-align" id="inputSearch"
+    style="padding-left: 40px !important" type="text" autocomplete="off" autofocus id="header_search_input"
+    placeholder="Search user name">
+    <ng-container *ngIf="userSearchDetails">
+        <p class="users__text">Search Details:</p>
+        <app-user-card [userData]="userSearchDetails"></app-user-card>
+
+    </ng-container>
+
+  <p class="users__text">Users List:</p>
+  <div class="u_display_flex">
+    <ng-container *ngFor="let user of usersList">
+      <app-user-card [userData]="user"></app-user-card>
+
+    </ng-container>
+  </div>
+</div>
